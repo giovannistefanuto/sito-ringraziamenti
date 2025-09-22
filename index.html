@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grazie di Cuore!</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header id="header-section" data-aos="fade-in" data-aos-duration="1000">
+            <h1>Grazie</h1>
+            <p class="sottotitolo">Se sei arrivato su questa pagina, vuol dire che c'è un piccolo pensiero per te, che mi hai aiutato ad arrivare alla fine di questo magico percorso triennale.</p>
+        </header>
+
+        <main>
+            <section id="login-section" data-aos="fade-up" data-aos-delay="200">
+                <div class="card">
+                    <h2>Un Grazie personalizzatissimo</h2>
+                    <p>
+                        Invece dei soliti ringraziamenti formali, ho preferito fare qualcosa di diverso.
+                        Ho preparato un pensiero solo per te. Inserisci qui sotto la parola segreta che ti ho dato per sbloccarlo.
+                        <br><br>
+                        Ah, e se vuoi leggerti il frutto di tanta fatica, puoi scaricare la mia tesi da qui!
+                    </p>
+                    <a href="Stefanuto_Giovanni_tesi.pdf" class="btn-tesi" download>Scarica la Tesi (.pdf)</a>
+                    <form id="login-form">
+                        <input type="text" id="parola-segreta" placeholder="Scrivi qui la parola segreta..." autocomplete="off" required>
+                        <button type="submit">Scopri il tuo grazie</button>
+                        <p id="error-message" class="error-message"></p>
+                    </form>
+                </div>
+            </section>
+
+            <section id="ringraziamento-section" class="hidden" data-aos="fade-in">
+                <div class="card personalized-card">
+                    <img id="foto-persona" src="" alt="Foto della persona ringraziata">
+                    <h2 id="nome-persona"></h2>
+                    <p id="testo-ringraziamento"></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 [Il Tuo Nome]. Realizzato con codice e caffè.</p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="ringraziamenti.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

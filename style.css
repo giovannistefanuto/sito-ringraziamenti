@@ -22,13 +22,20 @@
 
 body {
     font-family: var(--font-primary);
-    background-color: var(--bg-color);
+    /* --- SFONDO --- */
+    background-image: url("immagini/sfondo.JPG"); /* tua immagine verticale */
+    background-size: cover;       /* Copre sempre tutto lo schermo */
+    background-position: center;  /* Centra l’immagine */
+    background-repeat: no-repeat; /* Non ripete */
+    background-attachment: fixed; /* (opzionale) effetto parallax leggero */
+    
     color: var(--primary-text-color);
     line-height: 1.7;
     display: flex;
     justify-content: center;
     padding: 2rem 1rem;
 }
+
 
 .container {
     width: 100%;
@@ -214,3 +221,17 @@ footer {
    i bottoni, il modulo di login e il footer. Sono presenti anche animazioni per migliorare l'interattività.
    Inoltre, sono state aggiunte media query per garantire una buona esperienza utente su dispositivi mobili.
 */
+/* --- Adattamento per schermi larghi --- */
+@media (min-width: 1024px) {
+    body {
+        /* Se hai una versione orizzontale, usa questa */
+        /* background-image: url("immagini/sfondo-orizzontale.jpg"); */
+
+        /* Oppure, se vuoi mantenere la stessa immagine
+           ma mostrarla interamente senza tagliarla: */
+        background-size: contain;   /* Mostra tutta l’immagine */
+        background-color: #0F1C2E;  /* Colore di riempimento ai lati */
+        background-position: top center;
+    }
+}
+/* --- Fine adattamento per schermi larghi --- */

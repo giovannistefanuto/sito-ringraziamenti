@@ -235,3 +235,38 @@ footer {
     }
 }
 /* --- Fine adattamento per schermi larghi --- */
+
+/* --- Stili Sezione Premio --- */
+#pulsante-premio {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--secondary-accent-color);
+    color: var(--bg-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+#pulsante-premio:hover {
+    background-color: #ffd97a;
+    transform: translateY(-2px);
+}
+
+.risultato-premio {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-height: 2rem; /* Evita che il layout "salti" */
+}
+
+.risultato-premio.vittoria {
+    color: var(--secondary-accent-color); /* Giallo brillante */
+}
+
+.risultato-premio.sconfitta {
+    color: var(--secondary-text-color); /* Grigio chiaro */
+}
+/* --- Fine Stili Sezione Premio --- */

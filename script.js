@@ -48,4 +48,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         parolaInput.value = '';
     });
+// --- Logica per il gioco a premi ---
+    const pulsantePremio = document.getElementById('pulsante-premio');
+    const risultatoPremio = document.getElementById('risultato-premio');
+
+    const frasiSconfitta = [
+        'Mi dispiace, hai perso.',
+        'Sei stato sfortunato, hai perso.',
+        'Niente caffè oggi, ritenta!',
+        'La fortuna è cieca, ma oggi ci vede benissimo.',
+        'Nope. Niente da fare.',
+        'Il server dice "hai perso". Non prendertela con me.',
+        'Hai perso. Ma hey, almeno ci hai provato!'
+    ];
+
+    pulsantePremio.addEventListener('click', () => {
+        // Pulisce le classi precedenti
+        risultatoPremio.classList.remove('vittoria', 'sconfitta');
+
+        const numeroCasuale = Math.random(); // Genera un numero tra 0 e 1
+
+        if (numeroCasuale < 0.01) { // Probabilità dell'1%
+            risultatoPremio.textContent = 'INCREDIBILE! HAI VINTO UN CAFFÈ OFFERTO DA GIO!';
+            risultatoPremio.classList.add('vittoria');
+        } else {
+            const fraseCasuale = frasiSconfitta[Math.floor(Math.random() * frasiSconfitta.length)];
+            risultatoPremio.textContent = fraseCasuale;
+            risultatoPremio.classList.add('sconfitta');
+        }
+    });
 });
